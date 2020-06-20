@@ -1,17 +1,9 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react'
+import ReactDOM from 'react-dom';// ReactDom permite cargar mi jsx (js + html), ademas que permite crear mi arbol de elementos 
+/* import PrimeraApp from './PrimeraApp'; */
 import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import CounterApp from './CounterApp';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+const divRoot = document.querySelector('#root');
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+ReactDOM.render(<CounterApp value={124}/>, divRoot); 
