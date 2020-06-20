@@ -1,5 +1,6 @@
-import { heroes } from './data/heroes';
 
+import heroes, {owners} from '../data/heroes';
+ 
 
 
 const getHeroeById = (id)=>{
@@ -10,6 +11,11 @@ const getHeroeById = (id)=>{
 const getHeroeByOwner= (owner)=>{
     return heroes.filter( x => x.owner.toUpperCase() === owner.toUpperCase() );
 }
-console.log(getHeroeById(2));
+/* console.log(getHeroeById(2));
 
-console.log(getHeroeByOwner('marvel'));
+console.log(getHeroeByOwner('marvel')); */
+
+export {
+    getHeroeById as default,
+    getHeroeByOwner
+}
