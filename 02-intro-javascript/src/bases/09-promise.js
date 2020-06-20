@@ -1,4 +1,4 @@
-import getHeroeById from './bases/08-impo-expo'
+import getHeroeById from '../bases/08-impo-expo'
 /* PROMESAS */
 /* 
 rec ibe un callback
@@ -38,6 +38,12 @@ const getHeroeByIdAsync = (id) => {
     return promesa;
 }
 
-getHeroeByIdAsync(2)
+// it's important to comment this, because this will be the exported promise stay done
+/* getHeroeByIdAsync(2)
     .then(console.log)
-    .catch(console.warn );
+    .catch(console.warn ); */
+
+export {
+    getHeroeByIdAsync as default,
+}
+

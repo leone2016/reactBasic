@@ -2,7 +2,11 @@
 
 getImagenPromesa().then(console.log) */
 
-const getImagen = async () =>{
+//async  = PROMISE
+//async  = PROMISE
+//async  = PROMISE
+//async  = PROMISE
+export const getImagen = async () =>{
 
     try {
         const apiKey ='MqtrptKjziwL1muCjL83PtXkQ8rhdV3I';
@@ -10,13 +14,15 @@ const getImagen = async () =>{
         const {data} = await respuesta.json();
         const {url} = data.images.original;
         const img = document.createElement('img');
-        img.src = url;
-        document.body.append(img);
+        // it's everything is Ok, return an url
+        return url;
+        /* img.src = url;
+        document.body.append(img); */
     } catch (error) {
-        
+        return 'No existe';
     }
   
 
 }
 
-getImagen();
+/* getImagen(); */

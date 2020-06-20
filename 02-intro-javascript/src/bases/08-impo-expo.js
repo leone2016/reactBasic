@@ -1,6 +1,5 @@
 
 import heroes, {owners} from '../data/heroes';
- 
 
 
 const getHeroeById = (id)=>{

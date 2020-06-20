@@ -1,11 +1,11 @@
 /*  TEMPLETE STRINGS */
 
-const nombre = "Leonardo";
+const name = "Leonardo";
 const apellido = "Medina";
 
-const nombreCompleto = ` Hola mundo ${nombre} ${apellido} ${2019 + 1}`;
-
-function getSaludo(nombre){
-    return ' Hola' + nombre;
+const nameCompleto = `Hello world ${name} ${apellido} ${2019 + 1}`;
+/* it's importan to export for test this function */
+export function getGreetings(name = 'default' ){
+    return 'Hello World ' + name;
 }
-console.log(`Este es un saludo: ${getSaludo(nombre)}`);
+/* console.log(`Este es un saludo: ${getSaludo(name)}`); */

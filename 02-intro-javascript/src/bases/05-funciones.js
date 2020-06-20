@@ -1,14 +1,15 @@
 //funciones Js
 
-const saludar = ( nombre ) =>   ` HOla ${ nombre }`;
+/* const saludar = ( nombre ) =>   ` HOla ${ nombre }`; */
 
-const getUser = () => ({
+// it's import to export for test
+export const getUser = () => ({
     nombre: 'Leonardo',
     apellido: 'Medina',
 });
 
-console.log(saludar('Goku'));
-console.log(getUser); 
+/* console.log(saludar('Goku'));
+console.log(getUser);  */
 
 
 
@@ -16,11 +17,11 @@ console.log(getUser);
 /* 1. Transforme a una función de flecha
 2. Tien que retornar un objeto implícito
 3. Pruebas */
-const  getUsuaruiActivo = (  nombre ) =>({ 
+export const  getUsuaruiActivo = (  nombre ) =>({ 
     uuid: 'asdasdasd645656',
-    userName: nombre
-}) 
+    userName: nombre    
+})  
 
 
 const usuarioActivo = getUsuaruiActivo('Leonardo');
-console.log(usuarioActivo);
+/* console.log(usuarioActivo); */
