@@ -1,8 +1,4 @@
-## Snippets 
 
-* ``` rafcp ``` created a **funcional component** with PropTypes
-* ``` test ``` created a **basic dev test**
-* ``` desc ``` created a **basic dev describe**
 ### Unit tests
 
 
