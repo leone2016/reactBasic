@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 
 /* {saludo = 'porDefecto'} */
-const PrimeraApp = ({ saludo, subTitulo}) => {
+export const PrimeraApp = ({ saludo, subTitulo}) => {
 
     const data = {
         nombre: "Leonardo",
