@@ -32,7 +32,8 @@ input{
 
 }
 .card img{
-  max-height: 170px;
+  
+  width: 100%;
 
 }
 .card p {

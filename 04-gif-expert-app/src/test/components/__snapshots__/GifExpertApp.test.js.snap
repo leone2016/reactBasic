@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UNIT TEST GifExpertApp.test.js should be show <GifExpertApp/> correctly 1`] = `
+<div>
+  <h2>
+    GifExpertApp
+  </h2>
+  <AddCategory
+    setcategories={[Function]}
+  />
+  <hr />
+  <button
+    onClick={[Function]}
+  >
+    Agregar
+  </button>
+  <ol>
+    <GifGrid
+      category="One Punch"
+      key="One Punch"
+    />
+  </ol>
+</div>
+`;

@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UNIT TEST GifGrid.test.js  debe de mostrar correctamente 1`] = `
+<Fragment>
+  <h3>
+    Goku
+  </h3>
+  <div
+    className="card-grid"
+  >
+    <h4>
+      C A R G A N D O . . .
+    </h4>
+    <ol />
+  </div>
+</Fragment>
+`;
+
+exports[`UNIT TEST GifGrid.test.js  debe mostrar items cuando se cargan imagenes useFetchGifs 1`] = `
+<Fragment>
+  <h3>
+    Goku
+  </h3>
+  <div
+    className="card-grid"
+  >
+    <h4>
+      C A R G A N D O . . .
+    </h4>
+    <ol>
+      <GifGridItem
+        id="ABC"
+        key="ABC"
+        title="Cualquier Cosa"
+        url="https://localhost/cualquierCosa/test.jpg"
+      />
+    </ol>
+  </div>
+</Fragment>
+`;
+
+exports[`UNIT TEST GifGrid.test.js  debe mostrar items cuando se cargan imagenes useFetchGifs 2`] = `
+<Fragment>
+  <h3>
+    Goku
+  </h3>
+  <div
+    className="card-grid"
+  >
+    <h4>
+      C A R G A N D O . . .
+    </h4>
+    <ol>
+      <GifGridItem
+        id="ABC"
+        key="ABC"
+        title="Cualquier Cosa"
+        url="https://localhost/cualquierCosa/test.jpg"
+      />
+    </ol>
+  </div>
+</Fragment>
+`;
