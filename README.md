@@ -15,3 +15,4 @@
 * [enzyme-to-json](https://www.npmjs.com/package/enzyme-to-json)
 * [Estructura dearchivos React](https://es.reactjs.org/docs/faq-structure.html)
 * [structuring projects React](https://hackernoon.com/structuring-projects-and-naming-components-in-react-1261b6e18d76)
+* [react-hooks-testing](https://react-hooks-testing-library.com/#the-problem)
