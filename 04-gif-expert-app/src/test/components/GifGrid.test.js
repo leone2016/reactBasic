@@ -23,11 +23,14 @@ describe('UNIT TEST GifGrid.test.js ', () => {
       }]
       useFetchGifs.mockReturnValue({
          data: gifs,
-         loading: true
+         loading: false
       });
       const wrapper = shallow(<GifGrid category={category} />);
-      expect(wrapper).toMatchSnapshot();
+      // clase 97
+      // si loading esta en false, no debe mostar cargando ...
+      expect( wrapper.find('p').exists()).toBe(false);
+      // validar si existe GifGridItem
+       expect( wrapper.find('GifGridItem').length).toBe( gifs.length);
 
-      expect(wrapper).toMatchSnapshot();
    });
 });

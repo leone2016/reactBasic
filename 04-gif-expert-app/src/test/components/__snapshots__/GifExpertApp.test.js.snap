@@ -14,11 +14,6 @@ exports[`UNIT TEST GifExpertApp.test.js should be show <GifExpertApp/> correctly
   >
     Agregar
   </button>
-  <ol>
-    <GifGrid
-      category="One Punch"
-      key="One Punch"
-    />
-  </ol>
+  <ol />
 </div>
 `;
