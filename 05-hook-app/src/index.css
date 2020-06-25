@@ -1,0 +1,36 @@
+html, body{
+    color: white;
+    background-color: #21232A;
+    font-family: "IBM Plex Mono",monospace,sans-serif;
+    font-size: 1rem;
+    padding: 70px; 
+}
+
+button {
+    font-size: 1.3rem;
+    margin-right: 1rem;
+    padding: 1rem;
+}
+
+.loading {
+    background-color: #4a9be2;
+    padding: 1rem 1rem;
+    text-align: center;
+    border-radius: 0.2rem;
+}
+.blockquote{
+    text-align: right;
+    margin: unset;
+}
+.blockquote p {
+    margin-bottom: unset;
+  }
+
+.blockquote-footer {
+    display: block;
+    font-size: 80%;
+  }
+
+  .blockquote-footer::before{
+    content: "\2014 \00A0"; 
+  }
