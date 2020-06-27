@@ -1,36 +1,95 @@
-html, body{
-    color: white;
-    background-color: #21232A;
-    font-family: "IBM Plex Mono",monospace,sans-serif;
-    font-size: 1rem;
-    padding: 70px; 
+html, body {
+  color: white;
+  background-color: #21232A;
+  font-family: "IBM Plex Mono", monospace, sans-serif;
+  font-size: 1rem;
+  padding: 70px;
 }
 
 button {
-    font-size: 1.3rem;
-    margin-right: 1rem;
-    padding: 1rem;
+  font-size: 1.3rem;
+  margin-right: 1rem;
+  padding: 1rem;
 }
 
 .loading {
-    background-color: #4a9be2;
-    padding: 1rem 1rem;
-    text-align: center;
-    border-radius: 0.2rem;
+  background-color: #4a9be2;
+  padding: 1rem 1rem;
+  text-align: center;
+  border-radius: 0.2rem;
 }
-.blockquote{
-    text-align: right;
-    margin: unset;
+
+.blockquote {
+  text-align: right;
+  margin: unset;
 }
+
 .blockquote p {
-    margin-bottom: unset;
-  }
+  margin-bottom: unset;
+}
 
 .blockquote-footer {
-    display: block;
-    font-size: 80%;
-  }
+  display: block;
+  font-size: 80%;
+}
 
-  .blockquote-footer::before{
-    content: "\2014 \00A0"; 
-  }
+.blockquote-footer::before {
+  content: "\2014 \00A0";
+}
+
+ul {
+  list-style: none;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+ul li:not(:last-child) {
+  border-bottom: 1px solid #f4f4f4;
+}
+
+ul li {
+  text-align: center;
+  color: #67a4da;
+  font-size: 1.5rem;
+  padding: 1rem;
+  
+}
+
+/* ul li span{
+  float: left;
+} */
+
+.btn {
+  font-size: .7rem;
+  margin: 0 1rem 0 1rem;
+  padding: .5rem;
+  text-decoration: none;
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+}
+.btn.btn-danger{
+   background: #e95151;
+   color: #f4f4f4;
+   float: right;
+}
+.btn.btn-info{
+   background: #537ffa;
+   color: #f4f4f4;
+}
+.btn.btn-success{
+   background: #53fa85;
+   color: #000000;
+   font-weight: bold;
+}
+
+.complete {
+  text-decoration: line-through;
+}
+
+
+
+.from-control{
+  padding: .4rem;
+  border: none;
+}

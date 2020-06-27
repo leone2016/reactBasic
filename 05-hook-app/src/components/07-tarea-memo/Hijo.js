@@ -13,4 +13,4 @@ export const Hijo = memo(({ numero, incrementar }) => {
         </button>
     )
 }
-)
+) 

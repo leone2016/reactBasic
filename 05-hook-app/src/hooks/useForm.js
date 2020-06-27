@@ -5,8 +5,8 @@ import  { useState } from 'react'
  * @param {*} initialState  un ojeto de cualquier tipo
  */
 export const useForm = (initialState = {}) => {
-    const [values, setvalues] = useState(initialState);
 
+    const [values, setvalues] = useState(initialState);
 
     const handleInputChange = ({ target }) => {
         setvalues({
@@ -15,6 +15,10 @@ export const useForm = (initialState = {}) => {
         })
     }
 
-    return [values, handleInputChange ];
+    const reset = () => {
+        setvalues(initialState);
+    }
+
+    return [values, handleInputChange, reset ];
 
 }
