@@ -7,7 +7,6 @@ import {useCounter} from '../../hooks/useCounter'
 export const MultipleCustomHooks = () => {
 
     const {state:counter, increment } = useCounter(1);
-    console.log(counter);
     const stateFetch = useFetch(`https://www.breakingbadapi.com/api/quotes/${counter}`);
     console.log(stateFetch);
     const { loading, data } = stateFetch;
