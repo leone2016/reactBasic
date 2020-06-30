@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import { TodoApp } from './components/08-useReducer/TodoApp';
+/* import { TodoApp } from './components/08-useReducer/TodoApp'; */
+import { MainApp } from './components/09-useContext/MainApp';
 /* import { Padre } from './components/07-tarea-memo/Padre'; */
 
 /* import { CallbackHook } from './components/06-memo/CallbackHook'; */
@@ -19,7 +20,7 @@ import { CounterApp } from './components/01-useState/CounterApp'; */
 /* import { SimpleForm } from './components/02-useEffect/SimpleForm'; */
  
 ReactDOM.render(
-    <TodoApp />
+    <MainApp />
 ,  document.getElementById('root')
 );
 
