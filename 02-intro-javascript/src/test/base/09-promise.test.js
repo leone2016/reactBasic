@@ -8,7 +8,7 @@ describe('UNIT TEST 09-promise.test.js', () => {
         .then( heroe => {
             expect(heroe).toBe(heroes[0]);
             done();
-        });
+        }); 
     });
 
     test('should be get an Error if the Hero does no existe', (done) => {

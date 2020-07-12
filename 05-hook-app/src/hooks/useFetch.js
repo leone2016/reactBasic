@@ -18,20 +18,24 @@ export const useFetch = (url) => {
         fetch(url)
         .then( resp => resp.json() )
         .then( data => {
-            setTimeout(() =>{
+           /*  setTimeout(() =>{ */
                 if(isMounted.current){
                     setstate({ 
                         loading: false,
                         error: null,
                         data
                     });
-                }else{
-                    console.warn('setState no se llamo');
                 }
                 
 
-            },4000);
+           /*  },4000); */
            
+        }).catch(()=>{
+            setstate({
+                data: null, 
+                loading: false, 
+                error: 'No se pudo cargar la info'
+            });
         })
     },[url]);
 
