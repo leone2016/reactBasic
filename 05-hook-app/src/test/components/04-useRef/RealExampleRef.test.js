@@ -8,7 +8,7 @@ describe('Pruebas en <RealExampleRef/>', () => {
         expect(wrapper).toMatchSnapshot();
         // valida que cuando se carga <RealExampleRef/>, el componente <RealExampleRef/> no deberia de existir
         expect( wrapper.find('MultipleCustomHooks').exists() ).toBe(false);
-    });
+    }); 
     
     test('debe de mostrar el componente <MultipleCustomHooks/>' , () => {
         wrapper.find('button').simulate('click');
@@ -17,3 +17,4 @@ describe('Pruebas en <RealExampleRef/>', () => {
     
     
 })
+ 
