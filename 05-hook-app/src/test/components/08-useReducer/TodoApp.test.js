@@ -1,58 +1,51 @@
 import React from 'react';
-import { shallow } from 'enzyme';
-import { TodoAdd } from '../../../components/08-useReducer/TodoAdd';
+import { shallow, mount } from 'enzyme';
+import { TodoApp } from '../../../components/08-useReducer/TodoApp';
+import { act } from '@testing-library/react';
+import { demoTodos } from '../../fixtures/demoTodos';
+// cada que se ocupe el componente en este caso TodoApp, es necesario import React form 'react';
+//clase 157
+describe('test suit <TodoApp/>', () => {
+    const wrapper = shallow(<TodoApp />);
+    // en la linea 32 de TodoApp se realiza un guardado en localStorage, 
+    // esta es una forma generica de mockear la accion de guardar en localStorage
+    Storage.prototype.setItem = jest.fn(()=>{});
 
-describe('Pruebas en <TodoApp/>', () => {
-    const handleAddTodo = jest.fn();
-    const wrapper = shallow(
-        <TodoAdd
-            handleAddTodo={handleAddTodo}
-        />);
-    test('debe de mostrarse correctamente ', () => {
-
+    test('debe de mostrar el componente correctamente', () => {
         expect(wrapper).toMatchSnapshot();
+
+
     });
 
-    test('No debe de llamar handleAddTodo ', () => {
-        // simula el submit del formulario
-        //1.ero Evita que se haga el submit del form
+    test('debe de agregar un TODO', () => {
+        // el mount se puede utilizar cuando se necesita probar toda la aplicacion en contexto
+        // shalow vs mount
         /**
-         *  formSubmit hace referencia a una funcion
+         * la diferencia esta en el nivel en el cual es renderizada la aplicacion, es que el shallow es mas basico 
          */
-        const formSubmit = wrapper.find('form').prop('onSubmit');
-        // es necesario enviar el preventDefault() ya que se hace esta validacion en la linea 9 de TodoAdd.js
-        formSubmit({ preventDefault() { } });
-        // se espera que el handleAddTodo haya sido llamado cero vecess
-        expect(handleAddTodo).toHaveBeenCalledTimes(0);
+        const wrapper = mount(<TodoApp />);
+        // este act si sale de la libreria de pruebas de react
+        // se utiliza para hacer modificaciones
+        act(() => {
+            wrapper.find('TodoAdd').prop('handleAddTodo')(demoTodos[0]);
+            wrapper.find('TodoAdd').prop('handleAddTodo')(demoTodos[1]);
 
-    });
-
-    test('debe de llamar la funcion handleAddTodo', () => {
-        const value = 'Aprender React';
-        // en vez del simulate se puede utilidar .prop
-        wrapper.find('input').simulate('change', {
-            target: {
-                value,
-                name: 'description'
-            }
         });
-        const formSubmit = wrapper.find('form').prop('onSubmit');
-        // es necesario enviar el preventDefault() ya que se hace esta validacion en la linea 9 de TodoAdd.js
-        formSubmit({ preventDefault() { } });
-        // se espera que el handleAddTodo haya sido llamado cero vecess
-        expect(handleAddTodo).toHaveBeenCalledTimes(1);
-        // se necesita ser llamado con un obj
-        // el problema de agregar expect.any(Object) como objeto, es que se puede enviar un objeto vacio y puede  que la prueba pase
-        //expect(handleAddTodo).toHaveBeenCalledWith(expect.any(Object))
-        // para saber que parametros se tiene que enviar en tohavebeenCallwith, se puede enviar un objeto vacio y ver el error con lo que se  + Received
-        expect(handleAddTodo).toHaveBeenCalledWith({
-            id: expect.any(Number),
-            desc: value,
-            done: false            
-        })
-        // tambien se puede validar que despues que se haga el reset() el valor de descricion debe estar en vacio
-        expect(wrapper.find('input').prop('value')).toBe('');
+
+        expect(wrapper.find('h2').text().trim()).toBe('TodoApp (2)');
+        expect( localStorage.setItem).toHaveBeenCalledTimes(2); // estas dos veces estan en ña linea 30 y 31 de esta prueba 
+        /**
+         * esta validacion es similar a la que se hizo en TodoAdd.test.js linea 48 
+         * esta validacion esta incompleta
+         * expect( localStorage.setItem).toHaveBeenCalledwith({});
+         *  */ 
+        
     });
 
-
-});
+    test('debe de borrar un TODO',()=>{
+        wrapper.find('TodoAdd').prop('handleAddTodo')(demoTodos[0]);
+        expect(wrapper.find('h2').text().trim()).toBe('TodoApp (1)'); // prie
+        wrapper.find('TodoList').prop('handleDelete')(demoTodos[0].id);
+        expect(wrapper.find('h2').text().trim()).toBe('TodoApp (0)');
+    });
+})

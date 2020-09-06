@@ -1,6 +1,6 @@
 import React from 'react'
 import { useForm } from '../../hooks/useForm'
-
+// clase 156
 export const TodoAdd = ({ handleAddTodo }) => {
     const [{ description }, handleInputChange, reset] = useForm({
         description: ''
@@ -32,7 +32,7 @@ export const TodoAdd = ({ handleAddTodo }) => {
                 value={description}
                 onChange={handleInputChange}
             />
-            <button type="submit " class="btn btn-info" >Agregar TODO</button>
+            <button type="submit " className="btn btn-info" >Agregar TODO</button>
         </form>
     )
 }
