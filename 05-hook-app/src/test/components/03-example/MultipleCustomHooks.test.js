@@ -5,6 +5,7 @@ import { useFetch } from '../../../hooks/useFetch';
 import { useCounter } from '../../../hooks/useCounter';
 // el jest.mock lo que hace que cuando se vaya a utilizar ese archivo, en vez de utilizar el useFetch directo,
 // utiliza una implementación
+// clase 150
 jest.mock('../../../hooks/useFetch');
 jest.mock('../../../hooks/useCounter');
 

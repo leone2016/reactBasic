@@ -1,7 +1,7 @@
 
 import { renderHook, act } from '@testing-library/react-hooks';
 import { useForm } from '../../hooks/useForm';
-
+// clase 148
 describe('pruebas en useForm.test.js', () => {
 
     const initialForm = {
@@ -11,14 +11,14 @@ describe('pruebas en useForm.test.js', () => {
 
     it('must be return a form by default', () => {
         const { result } = renderHook(() => useForm(initialForm)); // valor por defecto
-        const [values, handleInputChange, reset] = result.current; // destructuracion de arreglos
+        const [values, handleInputChange, reset] = result.current; // destructuracion de arreglos, esto es lo que retorna, linea 22 useForm()
 
         expect(values).toEqual(initialForm);
         expect(typeof handleInputChange).toBe('function');
         expect(typeof reset).toBe('function');
     })
 
-    it("must be change the from's value (cambiar name)", () => {
+    it("must be change the from's value (change name)", () => {
 
         const { result } = renderHook(() => useForm(initialForm)); // valor por defecto
         const [, handleInputChange] = result.current; // se agrega una coma al inicio para decir que no importa ( values ) 

@@ -1,10 +1,11 @@
 import { renderHook, act } from '@testing-library/react-hooks';
 import { useFetch } from '../../hooks/useFetch';
+// clase 179
 describe('pruebas en useFetch.test.js', () => {
     test('must return the information by default ', () => {
         const { result } = renderHook(() => useFetch('https://www.breakingbadapi.com/api/quotes/1'));
 
-        console.log(result.current);
+       // console.log(result.current);
         const { data, loading, error } = result.current;
         // valores por defecto declarados en useFetch
 

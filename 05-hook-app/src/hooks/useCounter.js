@@ -22,7 +22,7 @@ export const useCounter = (initialState = 10 ) => {
 
     //useCounter
     return {
-        state,
+        state, //counter
         increment,
         decrement,
         resetear

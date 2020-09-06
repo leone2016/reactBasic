@@ -1,6 +1,6 @@
 import { renderHook, act } from '@testing-library/react-hooks';
 import { useCounter } from '../../hooks/useCounter';
-
+//clase 147
 describe('Pruebas en useCounter.test.js', () => {
     it('debe de retornar valores por defecto', () => {
         const { result } = renderHook(()=> useCounter()); // valor por defecto
@@ -13,14 +13,14 @@ describe('Pruebas en useCounter.test.js', () => {
 
         
     })
-    it('debe de retornar valores por defecto 100', () => {
+    it('debe de retornar valores por defecto 100 === ', () => {
         const { result } = renderHook(()=> useCounter(100)); // valor por defecto
         expect( result.current.state ).toBe(100);
 
     })
     it('debe de incrementar el counter en 1 ', () => {
         const { result } = renderHook(()=> useCounter(100)); // valor por defecto
-        // act: sirve para ejecutar una funcion
+        // act: es cuando se quiere hacer alguna accion de esas funciones  incrementar().... etc
         const { increment } = result.current;
         act (()=>{
             increment(1); // ejecuta la funcion
