@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en <TodoApp/> debe de mostrarse correctamente  1`] = `
+<form
+  onSubmit={[Function]}
+>
+  <input
+    autoComplete="off"
+    className="from-control"
+    name="description"
+    onChange={[Function]}
+    placeholder="Aprender ..."
+    type="text"
+    value=""
+  />
+  <button
+    class="btn btn-info"
+    type="submit "
+  >
+    Agregar TODO
+  </button>
+</form>
+`;

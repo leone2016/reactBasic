@@ -14,7 +14,7 @@ exports[`Prueba en <TodoListItem/> debe de mostrarse correctamente 1`] = `
     Aprender React
   </span>
   <button
-    class="btn btn-danger"
+    className="btn btn-danger"
     onClick={[Function]}
   >
     Borrar
