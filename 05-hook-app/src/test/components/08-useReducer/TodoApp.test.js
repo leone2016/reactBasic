@@ -44,7 +44,7 @@ describe('test suit <TodoApp/>', () => {
 
     test('debe de borrar un TODO',()=>{
         wrapper.find('TodoAdd').prop('handleAddTodo')(demoTodos[0]);
-        expect(wrapper.find('h2').text().trim()).toBe('TodoApp (1)'); // prie
+        expect(wrapper.find('h2').text().trim()).toBe('TodoApp (1)');
         wrapper.find('TodoList').prop('handleDelete')(demoTodos[0].id);
         expect(wrapper.find('h2').text().trim()).toBe('TodoApp (0)');
     });

@@ -22,3 +22,4 @@
 * [useLayoutEffect](https://es.reactjs.org/docs/hooks-reference.html#uselayouteffect )
 * [useReducer](https://es.reactjs.org/docs/hooks-reference.html#usereducer)
 * [react-router](https://reacttraining.com/react-router/web/api/NavLink)
+* [REACT TRAINING / REACT ROUTER](https://reactrouter.com/web/guides/testing)
