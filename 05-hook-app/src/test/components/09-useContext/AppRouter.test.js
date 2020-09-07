@@ -15,4 +15,6 @@ describe('Prueba en <AppRouter/>', () => {
     test('debe de mostrarse correctamente', () => {
         expect(wrapper).toMatchSnapshot();
     });
+    test()
+
 });
