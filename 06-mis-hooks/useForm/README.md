@@ -1,10 +1,15 @@
-# useCounter
+# useForm
 
 ejemplo de use:
 
 ````Js
     /**
-     * useCounter recibe un valor por defecto 
+     * useForm 
      */
-    const  {counter, increment,decrement,reset } = useCounter(10);
+    const initialForm = {
+        name: '',
+        age: 0,
+        email: ''
+    };
+    const [formValues, handleInputChange, reset ] = useForm( initialForm);
 ````
