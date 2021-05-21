@@ -3,9 +3,10 @@
 const name = "Leonardo";
 const apellido = "Medina";
 
-const nameCompleto = `Hello world ${name} ${apellido} ${2019 + 1}`;
+const nameCompleto = `Hello world ${name} ${apellido} ${2020 + 1}`;
 /* it's importan to export for test this function */
 export function getGreetings(name = 'default' ){
     return 'Hello World ' + name;
 }
-/* console.log(`Este es un saludo: ${getSaludo(name)}`); */
+
+console.warn(`Este es un saludo: ${getGreetings(name)} || ${nameCompleto}`);
